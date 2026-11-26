@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>سُفرة | أكل بيتي مصري</title>
+  <meta name="description" content="مطعم سُفرة: أكل مصري بيتي، مشويات، ومحشي، وحلويات بتتعمل كل يوم.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@500;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#menu">تخطي إلى المنيو</a>
+
+  <header class="header" id="top">
+    <div class="wrap header__in">
+      <a class="logo" href="#top">سُفرة</a>
+      <button class="burger" id="burger" aria-label="القائمة" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="nav" aria-label="التنقل الرئيسي">
+        <a href="#menu">المنيو</a>
+        <a href="#about">عن المطعم</a>
+        <a href="#visit">المواعيد والعنوان</a>
+        <a class="btn btn--sm" href="#book">احجز طاولة</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero__in">
+        <div class="hero__text">
+          <h1>الأكل زي ما أمك<br>كانت بتعمله.</h1>
+          <p>طواجن، محشي، ومشويات على الفحم. كل طبق بيتعمل النهارده من مكونات طازة.</p>
+          <div class="hero__cta">
+            <a class="btn" href="#menu">شوف المنيو</a>
+            <a class="btn btn--ghost" href="#book">احجز طاولة</a>
+          </div>
+        </div>
+        <aside class="today" aria-label="طبق اليوم">
+          <p class="today__label">طبق النهارده</p>
+          <h2>ملوخية بالفراخ البلدي</h2>
+          <p>مع أرز بالشعرية وعيش بلدي سخن.</p>
+          <p class="today__price"><strong>120</strong> ج.م</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="menu">
+      <div class="wrap">
+        <h2 class="title">المنيو</h2>
+        <div class="tabs" role="tablist" aria-label="أقسام المنيو" id="tabs"></div>
+        <ul class="menu" id="menuList"></ul>
+      </div>
+    </section>
+
+    <section class="section section--tint" id="about">
+      <div class="wrap about">
+        <div>
+          <h2 class="title">عن سُفرة</h2>
+          <p>بدأنا من مطبخ صغير بوصفات الجدات، ولسه بنطبخ بنفس الطريقة: نار هادية، ومكونات طازة، ومن غير اختصارات.</p>
+          <p>بنشتري الخضار كل صبح، ونخبز العيش في المطعم، ونحضّر الصلصات من الأول. اللي بتاكله النهارده اتعمل النهارده.</p>
+        </div>
+        <dl class="facts">
+          <div><dt>سنة الافتتاح</dt><dd>2014</dd></div>
+          <div><dt>المقاعد</dt><dd>60</dd></div>
+          <div><dt>أطباق يومية</dt><dd>35+</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section" id="visit">
+      <div class="wrap visit">
+        <div>
+          <h2 class="title">المواعيد والعنوان</h2>
+          <table class="hours">
+            <tbody>
+              <tr><th scope="row">السبت – الأربعاء</th><td>12 ظهرًا – 12 منتصف الليل</td></tr>
+              <tr><th scope="row">الخميس والجمعة</th><td>12 ظهرًا – 2 صباحًا</td></tr>
+            </tbody>
+          </table>
+          <p>شارع النيل، الدور الأرضي، بجوار الصيدلية.</p>
+          <p><a href="tel:+20100000000" dir="ltr">+20 100 000 0000</a></p>
+        </div>
+        <div class="map" role="img" aria-label="مكان الخريطة"><span>مكان الخريطة</span></div>
+      </div>
+    </section>
+
+    <section class="section section--dark" id="book">
+      <div class="wrap book">
+        <div>
+          <h2 class="title">احجز طاولة</h2>
+          <p>املا البيانات وهنأكد معاك على التليفون.</p>
+        </div>
+        <form class="form" id="bookForm" novalidate>
+          <label>الاسم
+            <input type="text" name="name" autocomplete="name" required>
+            <small class="err" data-for="name"></small>
+          </label>
+          <label>رقم الموبايل
+            <input type="tel" name="phone" inputmode="tel" autocomplete="tel" dir="ltr" required>
+            <small class="err" data-for="phone"></small>
+          </label>
+          <div class="row">
+            <label>التاريخ
+              <input type="date" name="date" required>
+              <small class="err" data-for="date"></small>
+            </label>
+            <label>الوقت
+              <input type="time" name="time" min="12:00" required>
+              <small class="err" data-for="time"></small>
+            </label>
+          </div>
+          <label>عدد الأفراد
+            <select name="guests">
+              <option>2</option><option>3</option><option>4</option><option>5</option>
+              <option>6</option><option>8</option><option>10</option>
+            </select>
+          </label>
+          <button class="btn btn--light" type="submit">أرسل الحجز</button>
+          <p class="ok" id="ok" role="status" hidden></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__in">
+      <span class="logo">سُفرة</span>
+      <small>© <span id="year"></span> مطعم سُفرة. كل الحقوق محفوظة.</small>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
